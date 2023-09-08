@@ -12,6 +12,7 @@ import Basket from './components/Basket';
 import Summary from './components/Summary';
 import Addons from './components/Addons';
 import ThankYou from './components/ThankYou';
+import QuickFill from './components/QuickFill';
 
 interface Props {
   items: Items;
@@ -68,10 +69,11 @@ function App({ items }: Props) {
         <Container fluid>
           <Header />
           <Routes>
+            <Route path='/addons' element={<Addons />} />
             <Route path='/basket' element={<Basket />} />
+            <Route path='/quick-fill' element={<QuickFill />} />
             <Route path='/menu' element={<Menu />} />
             <Route path='/summary' element={<Summary />} />
-            <Route path='/addons' element={<Addons />} />
             <Route path='/thank-you' element={<ThankYou />} />
             <Route path='/' element={<Home boxen={boxen} onNumberChanged={ctx.updateBoxen} />} />
           </Routes>

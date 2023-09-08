@@ -52,7 +52,7 @@ interface CheckboxProps {
 }
 
 function Checkbox({ basket, box, group, item, updateBasket }: CheckboxProps) {
-    const handleCheckboxChange = (event: MouseEvent<HTMLInputElement>) => {
+    const handleCheckboxClick = (event: MouseEvent<HTMLInputElement>) => {
         if (event.target) {
             let { value } = event.target as HTMLInputElement;
             if (basket[box]?.[group] === +value) {
@@ -63,8 +63,10 @@ function Checkbox({ basket, box, group, item, updateBasket }: CheckboxProps) {
         }
     };
 
+    const handleCheckboxChange = () => {};
+
     return (
-        <Form.Check className="fs-1 fw-bold text-center" type="radio" checked={basket[box]?.[group] === item} name={`${group}_${box}`} value={item} onClick={handleCheckboxChange} />
+        <Form.Check className="fs-1 fw-bold text-center" type="radio" checked={basket[box]?.[group] === item} name={`${group}_${box}`} value={item} onClick={handleCheckboxClick} onChange={handleCheckboxChange} />
     );
 }
 
@@ -127,7 +129,7 @@ export default function Menu() {
             <Table responsive>
                 <thead className="text-center">
                     <tr>
-                        <td>
+                        <td className='text-start'>
                             <Link to='/quick-fill'>Quick Fill</Link>
                         </td>
                         <TableHeader boxen={ctx.boxen} />

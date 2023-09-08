@@ -45,14 +45,14 @@ const items: Items = {
     ],
   },
   addons: [
-    { id: 100, name: 'Pillsbury Soft Baked Mini Chocolate', description: 'Chip Cookies - 5 Pack', image: null },
-    { id: 101, name: 'Larabar Kids Chocolate Brownie', description: 'Chocolate Brownie - 5 Pack', image: null },
-    { id: 102, name: "Annie's Organic Cheddar Bunnies", description: 'Cheddar Bunnies - 5 Pack', image: null },
-    { id: 103, name: 'Cheerios', description: '12 oz box', image: null },
-    { id: 104, name: 'Honey Nut Cheerios', description: '', image: null },
-    { id: 105, name: 'Nature Valley Granola Bar', description: 'Variety Pack – 30 ct.', image: null },
-    { id: 106, name: 'Chex Mix', description: '', image: null },
-    { id: 107, name: 'Old El Paso Tortillas', description: '', image: null },
+    { id: 100, name: 'Pillsbury Soft Baked Mini Chocolate', description: 'Chip Cookies - 5 Pack' },
+    { id: 101, name: 'Larabar Kids Chocolate Brownie', description: 'Chocolate Brownie - 5 Pack' },
+    { id: 102, name: "Annie's Organic Cheddar Bunnies", description: 'Cheddar Bunnies - 5 Pack' },
+    { id: 103, name: 'Cheerios', description: '12 oz box' },
+    { id: 104, name: 'Honey Nut Cheerios', description: '' },
+    { id: 105, name: 'Nature Valley Granola Bar', description: 'Variety Pack – 30 ct.' },
+    { id: 106, name: 'Chex Mix', description: '' },
+    { id: 107, name: 'Old El Paso Tortillas', description: '' },
   ]
 }
 
