@@ -3,7 +3,6 @@ import { AppContext, ApplicationContext } from '../../context';
 import { Link } from 'react-router-dom';
 import AddonItem from '../AddonItem';
 import LunchBox from '../LunchBox';
-import Addons from '../Addons/index';
 
 export default function Basket() {
     const ctx = useContext(AppContext) as ApplicationContext;

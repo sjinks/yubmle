@@ -1,5 +1,6 @@
 import React, { MouseEvent, Fragment, useContext } from 'react';
 import { AppContext, ApplicationContext, Items } from '../../context';
+import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
@@ -9,10 +10,34 @@ interface TableHeaderProps {
 }
 
 function TableHeader({ boxen }: TableHeaderProps) {
+    const ctx = useContext(AppContext) as ApplicationContext;
+    const groups = Object.keys(ctx.items.items);
+    const counts: Record<string, number> = {};
+
+    groups.forEach((key) => {
+        counts[key] = ctx.items.items[key].length;
+    });
+
+    const onButtonClcikHandler = (event: MouseEvent<HTMLButtonElement>) => {
+        const target = event.target as HTMLButtonElement;
+        const box = +(target.dataset.box as string);
+
+        groups.forEach((group) => {
+            const item = Math.floor(Math.random() * counts[group]);
+            ctx.updateBasket(box, group, ctx.items.items[group][item].id);
+        });
+    };
+
     const arr = new Array(boxen).fill(0);
     return (
         <>
-            {arr.map((_, i) => <th key={i} scope='col'>Bag&nbsp;{i+1}<br/>⚡</th>
+            {arr.map((_, i) => (
+                    <th key={i} scope='col'>
+                        Bag&nbsp;{i+1}
+                        <br/>
+                        <Button variant='link' className='text-decoration-none' onClick={onButtonClcikHandler} data-box={i}>⚡</Button>
+                    </th>
+                )
             )}
         </>
     );
