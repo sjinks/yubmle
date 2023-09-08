@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+html, body, body > .container-fluid { width: 100%; height: 100%; margin: 0; padding: 0 }
+main { height: 100%; padding: 5rem 1rem; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar bg-light fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">YUMBLE</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+            </div>
+        </nav>
+        <main class="d-flex flex-column justify-content-center">
+            <div class="alert alert-info fs-1 fw-bold">
+                Free Shipping for 7+ Lunches
+            </div>
+            <div class="m-auto">
+                <p class="fs-1">Number of lunch bags</p>
+                <div class="input-group input-group-lg mb-3">
+                    <button class="btn btn-outline-dark btn-lg fw-bold fs-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"/>
+                        </svg>
+                    </button>
+                    <input type="text" class="form-control form-control-lg fw-bold fs-1 text-center" value="1" size="1"/>
+                    <button class="btn btn-outline-dark btn-lg fw-bold fs-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+                        </svg>
+                    </button>
+                </div>
+                <button class="btn btn-success btn-lg fw-bold fs-1 m-auto d-block">Let's Go!</button>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="text-center">
+                        <tr>
+                            <td></td>
+                            <th scope="col">Bag&nbsp;1<br/>⚡</th>
+                            <th scope="col">Bag&nbsp;2<br/>⚡</th>
+                            <th scope="col">Bag&nbsp;3<br/>⚡</th>
+                            <th scope="col">Bag&nbsp;4<br/>⚡</th>
+                            <th scope="col">Bag&nbsp;5<br/>⚡</th>
+                            <th scope="col">Bag&nbsp;6<br/>⚡</th>
+                        </tr>
+                    </thead>
+                    <tbody style="vertical-align: middle;">
+                        <tr>
+                            <td colspan="7" class="text-center fs-3 fw-bolder bg-info" style="position: relative">
+                                <div style="max-width: 100vw; position: sticky; left: 0">Entrees</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Bobos’ PB&J Oat Bar</th>
+                            <td><input class="form-check-input fs-1 fw-bold" type="checkbox" value="" /></td>
+                            <td><input class="form-check-input fs-1 fw-bold" type="checkbox" value="" /></td>
+                            <td><input class="form-check-input fs-1 fw-bold" type="checkbox" value="" /></td>
+                            <td><input class="form-check-input fs-1 fw-bold" type="checkbox" value="" /></td>
+                            <td><input class="form-check-input fs-1 fw-bold" type="checkbox" value="" /></td>
+                            <td><input class="form-check-input fs-1 fw-bold" type="checkbox" value="" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <div class="fixed-bottom">
+            <div class="row bg-dark text-white pt-2 pb-2">
+                <div class="col-3 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                        <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"/>
+                    </svg>
+                </div>
+                <div class="col-3 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-box-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001 6.971 2.789Zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
+                    </svg>
+                </div>
+                <div class="col-3 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                    </svg>
+                </div>
+                <div class="col-3 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
