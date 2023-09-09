@@ -10,13 +10,13 @@ interface Props {
 
 export default function Home({ boxen, onNumberChanged }: Props) {
     return (
-        <main className="d-flex flex-column justify-content-center">
-            <Alert variant='primary'>
-                <p className='m-0 fs-1 fw-bold text-center'>Free Shipping for 7+ Lunches</p>
-            </Alert>
-            <div className='m-auto text-center'>
+        <main className="d-flex flex-column">
+
+            <p className='my-5 blue-bg fs-1 fw-bold text-center'>Free Shipping for 7+&nbsp;Lunches</p>
+
+            <div className='my-5 text-center'>
                 <LunchBoxCounter boxen={boxen} onNumberChanged={onNumberChanged} />
-                <Link to='/menu' className='fw-bold fs-1 btn btn-success'>Let's Go!</Link>
+                <Link to='/menu' className='fs-1 btn btn-success'>Let's Go!</Link>
             </div>
         </main>
     );

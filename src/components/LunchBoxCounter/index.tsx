@@ -16,14 +16,14 @@ export default function LunchBoxCounter({ boxen, onNumberChanged }: Props) {
 
     return (
         <>
-            <p className="display-4">Number of lunch bags</p>
-            <InputGroup className="mb-3 justify-content-center" size='lg'>
+            <p className="display-5">Number of lunch&nbsp;bags</p>
+            <InputGroup className="mb-3 justify-content-center launch-box" size='lg'>
                 <Button variant="outline-dark" size='lg' className='fw-bold' onClick={decrement} disabled={boxen < 2}>
-                    <Image src={minus} alt="-" />
+                    -
                 </Button>
-                <InputGroup.Text className='fw-bold text-center'>{boxen}</InputGroup.Text>
+                <InputGroup.Text className='fw-bold text-center lb-input'>{boxen}</InputGroup.Text>
                 <Button variant="outline-dark" size='lg' className='fw-bold' onClick={increment}>
-                    <Image src={plus} alt="+" />
+                    +
                 </Button>
             </InputGroup>
         </>

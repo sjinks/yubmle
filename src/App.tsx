@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Route, HashRouter as Router, Routes } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppContext, ApplicationContext, Items } from './context';
 import { Container } from 'react-bootstrap';

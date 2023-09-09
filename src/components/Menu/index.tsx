@@ -66,7 +66,7 @@ function Checkbox({ basket, box, group, item, updateBasket }: CheckboxProps) {
     const handleCheckboxChange = () => {};
 
     return (
-        <Form.Check className="fs-1 fw-bold text-center" type="radio" checked={basket[box]?.[group] === item} name={`${group}_${box}`} value={item} onClick={handleCheckboxClick} onChange={handleCheckboxChange} />
+        <Form.Check className="yumbleCheck fs-1 fw-bold text-center" type="radio" checked={basket[box]?.[group] === item} name={`${group}_${box}`} value={item} onClick={handleCheckboxClick} onChange={handleCheckboxChange} />
     );
 }
 
