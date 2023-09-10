@@ -1,28 +1,61 @@
 import React from 'react';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
-import Image from 'react-bootstrap/Image';
-import minus from 'bootstrap-icons/icons/dash-lg.svg';
-import plus from 'bootstrap-icons/icons/plus-lg.svg';
 
 interface CounterProps {
     value: number;
+    min?: number;
+    max?: number;
     onValueChanged: (value: number) => unknown;
 }
 
 
-export default function Counter({ value, onValueChanged }: CounterProps) {
-    const increment = () => onValueChanged(value + 1);
-    const decrement = () => onValueChanged(value - 1);
+export default function Counter({ min = 0, max = 100, value, onValueChanged }: CounterProps) {
+    const increment = () => onValueChanged(value < max ? value + 1 : max);
+    const decrement = () => onValueChanged(value > min ? value - 1 : min);
+    const keyDownHandler = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        switch (event.key) {
+            case 'ArrowUp':
+                increment();
+                break;
+
+            case 'ArrowDown':
+                decrement();
+                break;
+
+            case 'Home':
+                onValueChanged(min);
+                break;
+
+            case 'End':
+                onValueChanged(max);
+                break;
+
+            default:
+                break;
+        }
+
+        event.stopPropagation();
+        event.preventDefault();
+    };
 
     return (
-        <InputGroup className="mb-3 justify-content-center">
-            <Button variant="outline-dark" className='fw-bold' onClick={decrement} disabled={value < 1}>
-                <Image src={minus} alt="-" />
+        <InputGroup className="mb-3 justify-content-center launch-box" size='lg' role="spinbutton">
+            <Button variant="outline-dark" size='lg' className='fw-bold' onClick={decrement} disabled={value <= min} aria-hidden tabIndex={-1}>
+                -
             </Button>
-            <InputGroup.Text className='fw-bold text-center'>{value}</InputGroup.Text>
-            <Button variant="outline-dark" className='fw-bold' onClick={increment}>
-                <Image src={plus} alt="+" />
+            <InputGroup.Text
+                className='fw-bold text-center lb-input'
+                aria-valuemin={min}
+                aria-valuemax={max}
+                aria-valuenow={value}
+                tabIndex={0}
+                onKeyDown={keyDownHandler}
+            >
+                {value}
+            </InputGroup.Text>
+            <Button variant="outline-dark" size='lg' className='fw-bold' onClick={increment} disabled={value >= max} aria-hidden tabIndex={-1}>
+                +
             </Button>
         </InputGroup>
     );

@@ -1,30 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
-import house from 'bootstrap-icons/icons/house-door-fill.svg';
-import box from 'bootstrap-icons/icons/box-fill.svg';
-import heart from 'bootstrap-icons/icons/heart-fill.svg';
-import person from 'bootstrap-icons/icons/person-fill.svg';
+import home from '../../images/icon-home.png';
+import bag from '../../images/bag.png';
+import heart from '../../images/icon-heart.png';
+import person from '../../images/icon-person.png';
 
 export default function Footer() {
     return (
         <div className="fixed-bottom ">
-            <Row className="bg-black text-white yumble-footer">
-                <Col className="text-center">
-                    <Link to='/'><img src='images/icon-home.png' alt="Home" className='fs-1' style={{ width: '1em', height: '1em' }} /></Link>
+            <Row className="bg-black text-white text-center yumble-footer py-3">
+                <Col>
+                    <Link to='/'>
+                        <Image src={home} alt="Home" className='fs-1' />
+                    </Link>
                 </Col>
-                <Col className="text-center">
+                <Col>
                     { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */ }
-                    <a href="#"><img src='images/bag.png' alt="???" className='fs-1' style={{ width: '1em', height: '1em' }} /></a>
+                    <a href="#">
+                        <Image src={bag} alt="???" className='fs-1' />
+                    </a>
                 </Col>
-                <Col className="text-center">
+                <Col>
                     { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */ }
-                    <a href="#"><img src='images/icon-heart.png' alt="Favorites" className='fs-1' style={{ width: '1em', height: '1em' }} /></a>
+                    <a href="#">
+                        <Image src={heart} alt="Favorites" className='fs-1' />
+                    </a>
                 </Col>
-                <Col className="text-center">
+                <Col>
                     { /* eslint-disable-next-line jsx-a11y/anchor-is-valid */ }
-                    <a href="#"><img src='images/icon-person.png' alt="Profile" className='fs-1' style={{ width: '1em', height: '1em' }} /></a>
+                    <a href="#">
+                        <Image src={person} alt="Profile" className='fs-1' />
+                    </a>
                 </Col>
             </Row>
         </div>

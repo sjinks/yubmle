@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { AppContext, ApplicationContext } from '../../context';
 import { Link } from 'react-router-dom';
+import { AppContext, ApplicationContext } from '../../context';
 import AddonItem from '../AddonItem';
 import LunchBox from '../LunchBox';
 

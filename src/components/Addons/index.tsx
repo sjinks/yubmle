@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { AppContext, ApplicationContext } from '../../context';
 import AddonItem from '../AddonItem';
-import { Link } from 'react-router-dom';
 
 export default function Addons() {
     const ctx = useContext(AppContext) as ApplicationContext;

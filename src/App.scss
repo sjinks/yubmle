@@ -30,9 +30,6 @@ main { min-height: 100%; padding: 0 0 5rem 0; }
 
 .yumble-header
 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-
   img {
     max-height: 3rem;
   }
@@ -41,8 +38,10 @@ main { min-height: 100%; padding: 0 0 5rem 0; }
 
 .yumble-footer
 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  img {
+    width: 1em;
+    height: 1em;
+  }
 }
 
 .launch-box {

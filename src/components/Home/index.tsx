@@ -1,7 +1,6 @@
 import React from 'react';
-import Alert from 'react-bootstrap/Alert';
-import LunchBoxCounter from '../LunchBoxCounter';
 import { Link } from 'react-router-dom';
+import LunchBoxCounter from '../LunchBoxCounter';
 
 interface Props {
     boxen: number;
@@ -11,7 +10,6 @@ interface Props {
 export default function Home({ boxen, onNumberChanged }: Props) {
     return (
         <main className="d-flex flex-column">
-
             <p className='my-5 blue-bg fs-1 fw-bold text-center'>Free Shipping for 7+&nbsp;Lunches</p>
 
             <div className='my-5 text-center'>
