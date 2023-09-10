@@ -14,7 +14,7 @@ export default function LunchBox({ box, items }: BoxProps) {
 
     return (
         <>
-            <h3 className='text-primary fw-bolder clearfix'>
+            <h3 className='text-primary fw-bolder clearfix mb-3'>
                 Bag {box+1}
                 <Badge bg='success' pill className='float-end'><Link to='/menu' className='text-white text-decoration-none'>Modify</Link></Badge>
             </h3>
@@ -22,7 +22,7 @@ export default function LunchBox({ box, items }: BoxProps) {
                 {
                     Object.values(ctx.basket[box] ?? {}).map((id) => (
                         <ListGroup.Item key={id} as='li'>
-                            {items[+id]}
+                            - {items[+id]}
                         </ListGroup.Item>
                     ))
                 }

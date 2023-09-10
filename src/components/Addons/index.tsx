@@ -13,8 +13,8 @@ export default function Addons() {
 
     return (
         <main className="d-flex flex-column justify-content-center">
-            <h2 className='bg-info-subtle p-4 fw-bolder mb-3 mt-3'>While you are here&hellip;</h2>
-            <div className='mb-3'>
+            <h2 className='blue-bg text-center p-4 fw-bolder mb-3 mt-3'>While you are here&hellip;</h2>
+            <div className='mb-3 while-class'>
                 {ctx.items.addons.map((addon) => <AddonItem key={addon.id} addon={addon} count={ctx.addons[addon.id] ?? 0} updateAddon={ctx.updateAddon} />)}
             </div>
             <div className='text-center'>

@@ -18,12 +18,12 @@ export default function AddonItem({ addon, count, updateAddon }: AddonProps) {
 
     return (
         <>
-            <Row className='mb-2'>
-                <Col>
+            <Row className='mb-0 pb-0'>
+                <Col className='whileProductName'>
                     <h4 className='fw-bold'>{addon.name}</h4>
                 </Col>
             </Row>
-            <Row className='mb-3 align-items-center'>
+            <Row className='mb-5 align-items-center whileProductGrid'>
                 <Col xs={3} md={3} lg={1}>
                     <AddonImage id={addon.id} alt={addon.name} />
                 </Col>

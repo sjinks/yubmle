@@ -109,7 +109,7 @@ function TableItems({ basket, boxen, items, updateBasket }: TableItemsProps) {
                     return (
                         <Fragment key={key}>
                             <tr>
-                                <td colSpan={boxen+1} className="text-center fs-3 fw-bolder bg-info position-relative">
+                                <td colSpan={boxen+1} className="text-center fs-3 fw-bolder blue-bg position-relative">
                                     <div className='position-sticky start-0' style={{ maxWidth: '100vw' }}>{key}</div>
                                 </td>
                             </tr>
@@ -141,7 +141,7 @@ export default function Menu() {
             </Table>
 
             <div className='text-center'>
-                <Link to='/summary' className='btn btn-primary btn-lg'>Next</Link>
+                <Link to='/summary' className='btn btn-success btn-lg'>Next</Link>
             </div>
         </main>
     );

@@ -25,6 +25,9 @@ export default function Summary() {
 
     return (
         <main className="d-flex flex-column justify-content-center">
+
+            <h2 className='text-center fw-bold mb-3'>Your Order</h2>
+
             <div className='mb-3'>
                 {
                     ctx.basket.map((_, i) => (
@@ -34,7 +37,7 @@ export default function Summary() {
             </div>
 
             <div className='text-center'>
-                <Link to='/addons' className='btn btn-primary btn-lg'>Next</Link>
+                <Link to='/addons' className='btn btn-success btn-lg'>Next</Link>
             </div>
         </main>
     );

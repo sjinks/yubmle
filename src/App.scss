@@ -4,9 +4,10 @@ $blue: #4472C4;
 $green: #7acb63;
 
 .blue-bg {
-  background-color: $blue;
-  color: white;
+  background-color: $blue !important;
+  color: white !important;
 }
+
 
 .btn-success {
   background-color: $green !important;
@@ -70,3 +71,50 @@ main { min-height: 100%; padding: 0 0 5rem 0; }
   }
 }
 
+
+.yumbleCheck {
+
+  .form-check-input[type=radio] {
+    border-radius: 0;
+  }
+  .form-check-input:checked[type=radio] {
+    --bs-form-check-bg-image: url('../public/images/icon-radio.png') !important;
+    border-color: $green;
+  }
+
+}
+
+.while-class {
+
+  .whileProductName {
+
+    h4 { font-size: 100%; }
+
+
+  }
+
+  .whileProductGrid
+  {
+
+    .launch-box {
+
+      align-items: center !important;
+
+      span {
+        border: 1px solid black;
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 2rem !important;
+        padding: 0.6rem !important;
+        margin: 0 0.5rem 0 0.5rem !important;
+      }
+    }
+
+
+
+  }
+
+}
