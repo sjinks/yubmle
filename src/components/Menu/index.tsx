@@ -32,7 +32,7 @@ function TableHeader({ boxen }: TableHeaderProps) {
     return (
         <>
             {arr.map((_, i) => (
-                    <th key={i} scope='col'>
+                    <th key={i} scope='col' className='sticky-top' style={{ zIndex: 1 }}>
                         Bag&nbsp;{i+1}
                         <br/>
                         <Button variant='link' className='text-decoration-none' onClick={onButtonClcikHandler} data-box={i}>⚡</Button>
@@ -85,7 +85,7 @@ function Section({ basket, boxen, group, items, updateBasket }: SectionProps) {
             {items.map((item) => {
                 return (
                     <tr key={item.id}>
-                        <th scope='row'>{item.name}</th>
+                        <th scope='row' className='position-sticky start-0'>{item.name}</th>
                         {arr.map((_, i) => <td key={i}><Checkbox basket={basket} box={i} group={group} item={item.id} updateBasket={updateBasket} /></td>)}
                     </tr>
                 );
@@ -125,11 +125,11 @@ function TableItems({ basket, boxen, items, updateBasket }: TableItemsProps) {
 export default function Menu() {
     const ctx = useContext(AppContext) as ApplicationContext;
     return (
-        <main className="d-flex flex-column justify-content-center mb-3">
+        <main className="d-flex flex-column justify-content-center mb-3" style={{ height: '100%' }}>
             <Table responsive>
                 <thead className="text-center">
                     <tr>
-                        <td className='text-start'>
+                        <td className='text-start sticky-top' style={{ zIndex: 1 }}>
                             <Link to='/quick-fill'>Quick Fill</Link>
                         </td>
                         <TableHeader boxen={ctx.boxen} />
