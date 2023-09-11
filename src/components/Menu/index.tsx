@@ -35,7 +35,7 @@ function TableHeader({ boxen }: TableHeaderProps) {
                     <th key={i} scope='col' className='sticky-top' style={{ zIndex: 1 }}>
                         Bag&nbsp;{i+1}
                         <br/>
-                        <Button variant='link' className='text-decoration-none' onClick={onButtonClcikHandler} data-box={i}>⚡</Button>
+                        <Button variant='link' className='text-decoration-none' onClick={onButtonClcikHandler} data-box={i} aria-label={`Populate bag ${i+1} randomly`}>⚡</Button>
                     </th>
                 )
             )}
@@ -47,11 +47,12 @@ interface CheckboxProps {
     box: number;
     group: string
     item: number;
+    itemName: string;
     basket: ApplicationContext['basket'];
     updateBasket: ApplicationContext['updateBasket'];
 }
 
-function Checkbox({ basket, box, group, item, updateBasket }: CheckboxProps) {
+function Checkbox({ basket, box, group, item, itemName, updateBasket }: CheckboxProps) {
     const handleCheckboxClick = (event: MouseEvent<HTMLInputElement>) => {
         if (event.target) {
             let { value } = event.target as HTMLInputElement;
@@ -66,7 +67,16 @@ function Checkbox({ basket, box, group, item, updateBasket }: CheckboxProps) {
     const handleCheckboxChange = () => {};
 
     return (
-        <Form.Check className="yumbleCheck fs-1 fw-bold text-center" type="radio" checked={basket[box]?.[group] === item} name={`${group}_${box}`} value={item} onClick={handleCheckboxClick} onChange={handleCheckboxChange} />
+        <Form.Check
+            className="yumbleCheck fs-1 fw-bold text-center"
+            type="radio"
+            checked={basket[box]?.[group] === item}
+            name={`${group}_${box}`}
+            value={item}
+            onClick={handleCheckboxClick}
+            onChange={handleCheckboxChange}
+            aria-label={`${itemName}, bag ${box+1}`}
+        />
     );
 }
 
@@ -86,7 +96,7 @@ function Section({ basket, boxen, group, items, updateBasket }: SectionProps) {
                 return (
                     <tr key={item.id}>
                         <th scope='row' className='position-sticky start-0'>{item.name}</th>
-                        {arr.map((_, i) => <td key={i}><Checkbox basket={basket} box={i} group={group} item={item.id} updateBasket={updateBasket} /></td>)}
+                        {arr.map((_, i) => <td key={i}><Checkbox basket={basket} box={i} group={group} item={item.id} itemName={item.name} updateBasket={updateBasket} /></td>)}
                     </tr>
                 );
             })}
